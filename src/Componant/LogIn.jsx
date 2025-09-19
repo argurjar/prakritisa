@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { FaEyeSlash, FaEye, FaFacebook } from 'react-icons/fa'
 import { useGoogleLogin } from '@react-oauth/google'
-import FacebookLogin from 'react-facebook-login'
+// import FacebookLogin from 'react-facebook-login'
 import prakritisaLogo from '../assets/Image/logo/prakritisa-logo.png'
 import img1 from '../assets/Image/banner/MyAccount.webp'
 import '../assets/Css/Authform.css'
@@ -146,29 +146,29 @@ const handleGuestLogin = async () => {
   };
 
     // ✅ Facebook login
-    const handleFacebookResponse = async (response) => {
-        const { email, name, picture } = response;
+    // const handleFacebookResponse = async (response) => {
+    //     const { email, name, picture } = response;
 
-        try {
-            const res = await fetch('https://prakritisa.com/api/auth/facebooklogin', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ email, name, picture: picture.data.url }),
-            });
+    //     try {
+    //         const res = await fetch('https://prakritisa.com/api/auth/facebooklogin', {
+    //             method: 'POST',
+    //             headers: { 'Content-Type': 'application/json' },
+    //             body: JSON.stringify({ email, name, picture: picture.data.url }),
+    //         });
 
-            const data = await res.json();
-            if (res.ok) {
-                setToken(data.token);
-                localStorage.setItem('token', data.token);
-                alert('Facebook login successful');
-                handleLoginSuccess();
-            } else {
-                alert(data.message);
-            }
-        } catch (error) {
-            console.error('Facebook login error', error);
-        }
-    };
+    //         const data = await res.json();
+    //         if (res.ok) {
+    //             setToken(data.token);
+    //             localStorage.setItem('token', data.token);
+    //             alert('Facebook login successful');
+    //             handleLoginSuccess();
+    //         } else {
+    //             alert(data.message);
+    //         }
+    //     } catch (error) {
+    //         console.error('Facebook login error', error);
+    //     }
+    // };
 
     return (
         <div className='signin_Cont'>
@@ -245,7 +245,7 @@ const handleGuestLogin = async () => {
                                 </svg> &nbsp; Google 
                             </button>
 
-                              <button> <FacebookLogin
+                              {/* <button> <FacebookLogin
                                     appId="1379730216499477"
                                     autoLoad={false}
                                     fields="name,email,picture"
@@ -253,7 +253,7 @@ const handleGuestLogin = async () => {
                                     cssClass="facebook_login"
                                     textButton="&nbsp;&nbsp; Facebook"
                                     icon={<FaFacebook size={20} style={{ color: '#105da1' }} />}
-                                /></button> 
+                                /></button>  */}
                             </div>
                             <div className='navigate_link'>
                                 Not a member? <Link to='/signin'>Register</Link>
