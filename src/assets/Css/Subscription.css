@@ -1,0 +1,123 @@
+.subscription-container {
+  max-width: 800px;
+  margin: 0px auto;
+  margin-bottom: 50px !important;
+  padding: 20px;
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+  color: #000;
+}
+
+.subscription-container h2 {
+  font-size: 26px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.subscription-container p {
+  font-size: 16px;
+  color: #444;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+
+.subscription-form {
+  display: flex;
+  border: 1px solid #ccc;
+  border-radius: 40px;
+  overflow: hidden;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.subscription-form input[type="email"] {
+  flex: 1;
+  padding: 14px 20px;
+  font-size: 16px;
+  border: none;
+  outline: none;
+}
+
+.subscription-form button {
+  background-color: #000;
+  color: #fff;
+  padding: 14px 30px;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background 0.3s ease;
+}
+
+.subscription-form button:hover {
+  background-color: #333;
+}
+
+.terms {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #333;
+  text-align: left;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.terms input {
+  margin-top: 2px;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.terms a {
+  color: #000;
+  text-decoration: underline;
+}
+
+.store-locator {
+  margin-top: 40px;
+  font-weight: 600;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.store-locator .icon {
+  font-size: 10px;
+  width: 20px;
+  height: 20px;
+}
+
+
+
+
+@media (max-width: 600px) {
+  /* .subscription-form {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  } */
+
+  .subscription-form input[type="email"] {
+    width: 50px;
+    font-size: 12px;
+    
+  }
+
+  .subscription-form button {
+    font-size: 14px;
+    padding: 14px 12px;
+    
+  }
+
+  .subscription-container p{
+    font-size: 12px;
+  }
+}
